@@ -29,7 +29,8 @@ func main() {
 	hndlr := usercrudhandler.NewUserCrudHandler(usersvc)
 
 	pingHandler := &handlerlib.PingHandler{}
-	logger.Println("Starting service")
+	
+	logger.Println("Starting service for you")
 	h := mux.NewRouter()
 	h.Handle("/ping/", pingHandler)
 	h.Handle("/user/{id}", hndlr)
